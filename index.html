@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WOF by val</title>
+    <meta name="viewport" content="width=520, initial-scale=0.70">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>WHEEL OF FORTUNE <img src="images/info.svg" alt="help button" height="18px" onclick="alert('A minimal Wheel of Fortune simulator built by Val Ho.\n\nThe spinning wheel was modded from Douglas McKechie\'s WinWheel @ www.dougtesting.net\n\nIf you\'re really stuck, grab a hint from the console log!');"></header>
+    <div class="flexarea">
+      <div id="result">Welcome!<br>Tap the spin button to play.</div>
+    </div>
+        <div id="puzzlearea" class="disHighlight"><ul id="puzzlelist"></ul></div>
+        <div id="gameInfo"><strong><font color="white">BANK </font>: $<span id="funds">0</span></strong> <span id="change"></span></div>
+    <div class="flexarea">
+      <div id="wheel">
+        <canvas id="canvas" width="434" height="434">
+          <p style="{color: black}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+        </canvas>
+      </div>
+      <div id="controls">
+        <button class="button-dos" id="spin_button" onclick="startSpin()" alt="Spin">SPIN</button>
+      </div>
+    </div>
+    <div id="card">
+      Try a consonant: <select id="consonant">
+        <option value=""></option>
+        <option value='B' id='letterB'>B</option>
+        <option value='C' id='letterC'>C</option>
+        <option value='D' id='letterD'>D</option>
+        <option value='F' id='letterF'>F</option>
+        <option value='G' id='letterG'>G</option>
+        <option value='H' id='letterH'>H</option>
+        <option value='J' id='letterJ'>J</option>
+        <option value='K' id='letterK'>K</option>
+        <option value='L' id='letterL'>L</option>
+        <option value='M' id='letterM'>M</option>
+        <option value='N' id='letterN'>N</option>
+        <option value='P' id='letterP'>P</option>
+        <option value='Q' id='letterQ'>Q</option>
+        <option value='R' id='letterR'>R</option>
+        <option value='S' id='letterS'>S</option>
+        <option value='T' id='letterT'>T</option>
+        <option value='V' id='letterV'>V</option>
+        <option value='W' id='letterW'>W</option>
+        <option value='Y' id='letterY'>Y</option>
+        <option value='X' id='letterX'>X</option>
+        <option value='Z' id='letterZ'>Z</option>
+      </select><br><br>
+      Buy a vowel: <select id="vowel">
+        <option value=""></option>
+        <option value='A' id='letterA'>A</option>
+        <option value='E' id='letterE'>E</option>
+        <option value='I' id='letterI'>I</option>
+        <option value='O' id='letterO'>O</option>
+        <option value='U' id='letterU'>U</option>
+        <option value='Y' id='letterY'>Y</option>
+      </select> <img src="images/info.svg" height="15px" id="info" alt="help button" onclick="alert('Each vowel costs $250.')"><br><br>
+      <input type="text" id="fullguess" size="31"></input><br>
+      <button onclick="checkTypedWin()" id="guess">Guess the phrase</button><br><br>
+      <button onclick="checkTypedWin()" id="giveup">Give up</button>
+      <div id="buttons"></div>
+    </div>
+  </body>
+  <script src='winwheel\Winwheel.js'></script>
+  <script src='winwheel\TweenMax.min.js'></script>
+  <script src='jquery-3.3.1.js'></script>
+  <script src='winwheel.js'></script>
+  <script src='puzzles.js'></script>
+  <script src='script.js'></script>
+  <!--<script src='confetti.js'></script>-->
+</html>

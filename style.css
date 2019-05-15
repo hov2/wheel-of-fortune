@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+
+
+body {
+  background-color: #1866a8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Helvetica', sans-serif;
+}
+
+header {
+  font-family: 'Baloo Chettan', cursive;
+  /* color: #fe9a5e; */
+  background: -webkit-linear-gradient(#fe9a5e, #ffc56b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 1px #333);
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  header {
+    font-size: 2.5em;
+    padding-top: 10px;
+  }
+}
+
+#card {
+  display: none;
+  background-color: #2b2b2b;
+  /* background-image: url('images/bg-black-textured.jpg');
+  background-size: cover; */
+  color: white;
+  position: absolute;
+  z-index: 99;
+  width: 540px;
+  height: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+  border-radius: 10px 10px 3px 3px;
+  margin: auto;
+  /*box-shadow: 0px -0px 6px #05396b;*/
+  font-family: 'Nunito Sans', sans-serif;
+  /*border: 1px solid #05396b;*/
+  font-size: .9em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #card {
+    font-size: 1.4em;
+    height: 30%;
+  }
+  select {
+    font-size: 1em;
+  }
+  input {
+    font-size: 1em;
+  }
+  #info {
+    height: 20px;
+  }
+}
+
+#guess {
+  background-color: #e8e8e8;
+  color: black;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border: none;
+  margin-top: 7px;
+  box-shadow:inset 0 -0.6em 0 -0.2em rgba(0,0,0,0.17);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#giveup {
+  background-color: #e8e8e8;
+  color: red;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border: none;
+  box-shadow:inset 0 -0.6em 0 -0.2em rgba(0,0,0,0.17);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #guess, #giveup {
+    font-size: .7em;
+  }
+}
+
+#result {
+  width: 400px;
+  padding: 13px;
+  margin-bottom: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  /*border: 1px solid black;*/
+  box-shadow: 8px 8px #f7bc90;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #result {
+    font-size: 1.25em;
+  }
+}
+
+#gameInfo {
+  width: 200px;
+  padding-top: 10px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Unica One', monospace;
+  font-size: 20px;
+  color: white;
+}
+
+#change {
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #gameInfo, #change {
+    font-size: 27px;
+  }
+}
+
+#game {
+  text-align: center;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.flexarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#wheel {
+  background-image: url('images/wheel_back4.png');
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+}
+
+#controls {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+}
+
+#spin_button {
+  border-radius: 50%;
+  background-color: #ff7b60;
+  height: 80px;
+  width: 80px;
+  outline: none;
+  margin-bottom: 5px;
+  font-family: 'Unica One', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  /*border: 1px solid #5cdb94;*/
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+
+#hiddenvalue {
+  display: none;
+}
+
+#change {
+  padding-left: 5px;
+}
+
+#puzzlearea {
+  /*background-color: #1FA7A1;*/
+  padding-left: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  background-image: url('images/puzzleboard.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #puzzlearea {
+    width: 510px;
+    padding-right: 37px;
+  }
+}
+
+#puzzlearea li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 22px;
+  width: 22px;
+  font-family: 'Ubuntu Mono', serif;
+  font-size: 20px
+}
+
+.disHighlight{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+}
+
+.puzzleInvisible {
+  background-color: white;
+  color: white;
+  border: 2px solid #05396b;
+  box-shadow: 1px 1px black;
+}
+
+.puzzleVisible {
+  color: black;
+}
+
+#canvas {
+}
+
+/* Two */
+.button-dos {
+  background-repeat: no-repeat;
+  background-position: -120px -120px, 0 0;
+
+  background-image: -webkit-linear-gradient(
+    top left,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-image: -moz-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-image: -o-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-image: linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+
+  -moz-background-size: 250% 250%, 100% 100%;
+       background-size: 250% 250%, 100% 100%;
+
+  -webkit-transition: background-position 0s ease;
+     -moz-transition: background-position 0s ease;
+       -o-transition: background-position 0s ease;
+          transition: background-position 0s ease;
+}
+
+.button-dos:hover {
+  background-position: 0 0, 0 0;
+
+  -webkit-transition-duration: 1s;
+     -moz-transition-duration: 1s;
+          transition-duration: 1s;
+}
